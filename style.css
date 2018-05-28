@@ -1,0 +1,335 @@
+/*
+Theme name: Look
+Description: Описание
+Author: Aleksandrlao
+Author URI: http://aleksandrlao.ru
+*/
+
+
+
+.alignleft {display: inline;float: left;margin: 5px 15px 5px 0;}
+.alignright {display: inline;float: right;margin: 5px 0 5px 15px;}
+.aligncenter {clear: both;display: block;margin: 5px auto;}
+
+
+*, *::before, *::after {
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+	display: block;
+}
+body {
+	font: 12px/18px Arial, sans-serif;
+}
+.m_box {
+	width: 100%;
+	min-width: 320px;
+	position: relative;
+}
+.m_inb {
+	width: 97%;
+  min-width: 320px;
+  max-width: 1100px;
+  margin: 0 auto;
+  position: relative;
+  border-top: 0px solid transparent;
+}
+.m_inb:after {
+  content: '';
+  display: block;
+  clear: both;
+  width: 100%;
+  height: 0;
+}
+
+
+/* Header ----------------------------------------------------------------------------- */
+.header {
+	
+}
+
+.h_nav-btn {
+  float: right;
+  display: none;
+  text-transform: uppercase;
+  width: 100%;
+  height: 15px;
+  margin-bottom: 10px;
+  text-align: right;
+  cursor: pointer;
+}
+.h_nav-btn span {
+  display: inline-block;
+  vertical-align: top;
+  width: 20px;
+  height: 2px;
+  -webkit-border-radius: 3px;
+          border-radius: 3px;
+  background: #717171;
+  margin: 7px 0 0;
+  position: relative;
+}
+.h_nav-btn span::before, .h_nav-btn span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 20px;
+  height: 2px;
+  -webkit-border-radius: 3px;
+          border-radius: 3px;
+  background: #717171;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+.h_nav-btn span::before {
+  top: -7px;
+}
+.h_nav-btn span::after {
+  bottom: -7px;
+}
+.h_nav.active .h_nav-btn span {
+  background: transparent;
+}
+.h_nav.active .h_nav-btn span::before {
+  top: 0;
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+.h_nav.active .h_nav-btn span::after {
+  bottom: 0;
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+
+
+.c_txt {
+  overflow: hidden;
+}
+.c_txt p {
+  margin-bottom: 21px;
+}
+.c_txt h2, h3 {
+  color: #000;
+  font-size: 25px;
+  line-height: 29px;
+}
+.c_txt table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.c_txt table tr td {
+  border: 1px solid #373737;
+  padding: 10px;
+}
+.c_txt ul, .c_txt ol {
+  margin: 0 0 25px 20px;
+}
+.c_txt li {
+  margin-bottom: 7px;
+}
+
+
+
+
+/* Middle ----------------------------------------------------------------------------- */
+.content {
+}
+
+
+
+
+/* Footer ----------------------------------------------------------------------------- */
+.footer {
+	
+}
+
+
+
+
+
+
+/* Всплывающие окна */
+.overlay {
+  display: none;
+  background-color: #000;
+  opacity: .7;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 999
+}
+.popup {
+  display: none;
+  position: relative;
+  width: 400px;
+  padding: 25px;
+  background: #fff;
+  text-align: center;
+  z-index: 9999;
+}
+.popup-close {
+  width: 24px;
+  height: 24px;
+  -webkit-border-radius: 100%;
+          border-radius: 100%;
+  position: absolute;
+  background: #000;
+  color: #FFF;
+  font-size: 12px;
+  line-height: 20px;
+  text-align: center;
+  border: 1px solid #363636;
+  top: -11px;
+  right: -11px;
+  cursor: pointer;
+}
+.popup-close:hover {
+  background: #FFF;
+  color: #000;
+}
+.popup-title {
+  font-size: 30px;
+  font-weight: 300;
+  line-height: 34px;
+  color: #000;
+  margin-bottom: 5px;
+}
+.popup-desc {
+  font-size: 13px;
+  line-height: 21px;
+  text-align: center;
+  color: #000;
+  margin-bottom: 20px
+}
+
+
+/* Форма */
+.form-input {
+	width: 314px;
+	height: 44px;
+	margin: auto;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	padding-left: 12px;
+	color: #000;
+	font-size: 15px;
+	line-height: 38px;
+	border: 1px solid #ccc;
+	display: block;
+	margin: 0 auto 12px;
+	outline: none;
+}
+.form-input.error {
+  color: #f00 !important;
+  border: 1px solid #f00 !important;
+}
+.form-input.valid {
+  border: 1px solid #339e36 !important;
+}
+.form-input:focus {
+  color: #000;
+}
+.form-input::-webkit-input-placeholder {
+  color: #000;
+}
+.form-input::-moz-placeholder {
+  color: #000;
+}
+.form-input:-moz-placeholder {
+  color: #000;
+}
+.form-input:-ms-input-placeholder {
+  color: #000;
+}
+.form-label {
+  position: relative;
+}
+
+.popup-body input, .popup-body textarea {
+	width: 100%;
+	height: 40px;
+	margin-top: 12px;
+	padding-left: 12px;
+	border: 1px solid #eee;
+	background-color: #FFF;
+	outline: none;
+}
+.popup-body textarea {
+	height: 120px;
+	resize: none;
+	padding-top: 5px;
+}
+.popup-body input[type="submit"] {
+	height: 46px;
+	padding-left: 0;
+	background-color: #FC0;
+	border: 1px solid #FC0;
+	color: #000;
+	font-size: 17px;
+	font-weight: bold;
+	line-height: 44px;
+	cursor: pointer;
+}
+
+input.hide_input {
+	display: none;
+}
+span.wpcf7-not-valid-tip, div.wpcf7-validation-errors {
+	display: none !important;
+}
+.popup-body input.wpcf7-not-valid {
+	border: 1px solid #c00;
+}
+label.error {
+  position: absolute;
+  top: -16px;
+  left: 0;
+  font: 400 14px/24px 'arial', sans-serif;
+  height: 26px;
+  padding: 0 10px;
+  background: #f3cb1c;
+  box-shadow: 0 1px 2px #8b7308;
+  color: #000;
+}
+label.error:after {
+  content: '';
+  position: absolute;
+  bottom: -9px;
+  left: 5px;
+  width: 0;
+  height: 0;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-top: 10px solid #f3cb1c;
+}
+
+.popup-thy {
+	position: fixed;
+	top: calc(50% - 160px);
+	left: calc(50% - 200px);
+}
+
+
+
+
+/* ==============================================================
+   ========================  MEDIA  =============================
+   ============================================================== */
+@media screen and (max-width:1100px) {
+
+	
+
+}
